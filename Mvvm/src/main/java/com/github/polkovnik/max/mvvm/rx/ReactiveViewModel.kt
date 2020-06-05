@@ -16,6 +16,13 @@ abstract class ReactiveViewModel(application: Application) : ViewModel(applicati
     private val subscriptions: MutableList<Disposable> = mutableListOf()
     private val subscriptionsWhileVisible: MutableList<Disposable> = mutableListOf()
 
+    override fun stop() {
+        super.stop()
+
+        subscriptionsWhileVisible.forEach { it.dispose() }
+        subscriptionsWhileVisible.clear()
+    }
+
     open fun destroy() {
         subscriptions.forEach { it.dispose() }
         subscriptions.clear()
