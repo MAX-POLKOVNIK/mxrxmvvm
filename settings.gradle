@@ -1,0 +1,2 @@
+include ':Mvvm'
+rootProject.name = "RxMvvm"
