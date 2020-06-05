@@ -1,7 +1,8 @@
-package com.github.polkovnik.max.mvvm
+package com.github.polkovnik.max.mvvm.rx
 
 import android.app.Application
 import androidx.annotation.StringRes
+import com.github.polkovnik.max.mvvm.ViewModel
 import com.github.polkovnik.max.mvvm.state.Idle
 import com.github.polkovnik.max.mvvm.state.loading.UiLockLoadingState
 import com.jakewharton.rxrelay2.PublishRelay
